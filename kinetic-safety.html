@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Safety & Compliance | Omni Kinetic Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--bg2:#131315;--bg3:#1a1a1e;--bdr:#2a2a2e;--t1:#e8e8e8;--t2:#9a9a9a;--t3:#666;--or:#ff6b00;--ord:rgba(255,107,0,.12);--org:rgba(255,107,0,.06);--tl:#00f5d4;--tld:rgba(0,245,212,.1);--w:#fff;--sf:'Playfair Display',Georgia,serif;--sn:'DM Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sn);color:var(--t1);background:var(--bg);-webkit-font-smoothing:antialiased}a{color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,10,11,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);padding:0 4rem;display:flex;justify-content:space-between;align-items:center;height:68px}
+.nl{font-size:1rem;font-weight:600;color:var(--t1);text-decoration:none;display:flex;align-items:center;gap:.6rem}.mk{background:var(--or);color:var(--bg);font-size:.6rem;font-weight:700;letter-spacing:.18em;padding:.3rem .55rem;border-radius:3px}
+.nv{display:flex;gap:0;list-style:none}.nv>li{position:relative}.nv>li>a{font-size:.8rem;font-weight:400;color:var(--t2);text-decoration:none;padding:1.3rem 1rem;display:block;transition:color .2s}.nv>li>a:hover,.nv>li>a.active{color:var(--or)}
+.dd{display:none;position:absolute;top:100%;left:0;background:var(--bg3);border:1px solid var(--bdr);border-radius:6px;min-width:280px;box-shadow:0 12px 40px rgba(0,0,0,.4);padding:.4rem 0;z-index:200}.nv li:hover .dd{display:block}.dd a{display:block;padding:.65rem 1.2rem;font-size:.8rem;color:var(--t2);text-decoration:none;transition:background .15s}.dd a:hover{background:var(--ord);color:var(--or)}.dd a small{display:block;font-size:.7rem;color:var(--t3);margin-top:.1rem}
+.nc{font-size:.75rem;font-weight:600;color:var(--bg);background:var(--or);padding:.5rem 1.3rem;border-radius:4px;text-decoration:none}.nc:hover{background:#e55f00}
+.mobt{display:none;cursor:pointer;background:none;border:none}.mobt span{display:block;width:22px;height:2px;background:var(--t1);margin:5px 0}
+section{padding:5rem 4rem}.tg{font-size:.65rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:.8rem}.tt{font-family:var(--sf);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:600;line-height:1.25;margin-bottom:1rem}.ds{font-size:.9rem;font-weight:400;color:var(--t2);line-height:1.7;max-width:540px}
+.sp{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.cg{display:grid;gap:1.2rem;margin-top:2.5rem}.c3{grid-template-columns:repeat(3,1fr)}.c2{grid-template-columns:repeat(2,1fr)}
+.cd{background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:2rem;transition:all .3s}.cd:hover{border-color:var(--or);box-shadow:0 0 30px var(--org);transform:translateY(-2px)}
+.ic{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}.ic svg{width:20px;height:20px;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.ic.ti{background:var(--tld)}.ic.ti svg{stroke:var(--tl)}.ic.oi{background:var(--ord)}.ic.oi svg{stroke:var(--or)}
+.cd h3{font-size:1rem;font-weight:600;color:var(--t1);margin-bottom:.5rem}.cd p{font-size:.8rem;color:var(--t2);line-height:1.7}
+.cd ul{list-style:none;margin-top:.7rem}.cd ul li{font-size:.76rem;color:var(--t3);padding:.2rem 0 .2rem 1rem;position:relative}.cd ul li::before{content:'';position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--or)}
+.kb{background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;padding:1.2rem;text-align:center}.kv2{font-family:var(--sf);font-size:1.7rem;font-weight:600;color:var(--or)}.kl2{font-size:.62rem;font-weight:400;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
+.btn{display:inline-block;font-family:var(--sn);font-size:.8rem;font-weight:600;padding:.75rem 1.6rem;border-radius:4px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}.bo{background:var(--or);color:var(--bg)}.bo:hover{background:#e55f00}.bw{background:var(--w);color:var(--bg)}.bw:hover{background:#f0f0f0}
+.cb{background:var(--or);color:var(--bg);text-align:center;padding:4rem}.cb h2{font-family:var(--sf);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;margin-bottom:.8rem}.cb p{font-size:.92rem;color:rgba(10,10,11,.7);max-width:440px;margin:0 auto 1.8rem;line-height:1.6}
+footer{background:var(--bg2);border-top:1px solid var(--bdr);color:var(--t3);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;font-size:.72rem}footer strong{color:var(--or)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .4s ease,transform .4s ease}.rv.v{opacity:1;transform:translateY(0)}
+.mm{display:none;position:fixed;inset:0;background:var(--bg);z-index:200;flex-direction:column;justify-content:center;align-items:center;gap:1.5rem}.mm.open{display:flex}.mm a{font-size:1.2rem;font-weight:500;color:var(--t1);text-decoration:none}.mm a:hover{color:var(--or)}.mc{position:absolute;top:1rem;right:1.5rem;font-size:1.8rem;color:var(--t1);cursor:pointer;background:none;border:none}
+@media(max-width:1024px){section{padding:3.5rem 2rem}nav{padding:0 1.5rem}.cg.c3,.cg.c2,.sp{grid-template-columns:1fr}footer{padding:1.5rem 2rem;flex-direction:column;gap:.5rem;text-align:center}}
+@media(max-width:768px){.nv,.nc{display:none}.mobt{display:block}}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="nl"><span class="mk">OKC</span> Omni Kinetic</a><ul class="nv"><li><a href="index.html">Home</a></li><li><a href="#" class="active">Services &#9662;</a><div class="dd"><a href="network-optimization.html"><strong>Network Optimization</strong></a><a href="kinetic-safety.html"><strong>Kinetic Safety & Compliance</strong></a><a href="gig-platform.html"><strong>Gig Services Platform</strong></a></div></li><li><a href="index.html#results">Results</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#contact">Contact</a></li></ul><a href="index.html#contact" class="nc">Get in Touch</a><button class="mobt" onclick="document.querySelector('.mm').classList.add('open')"><span></span><span></span><span></span></button></nav>
+<div class="mm"><button class="mc" onclick="this.parentElement.classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="network-optimization.html">Network Optimization</a><a href="kinetic-safety.html">Kinetic Safety</a><a href="gig-platform.html">Gig Platform</a><a href="index.html#contact">Contact</a></div>
+
+<!-- HERO with camera network SVG -->
+<section style="padding:9rem 4rem 5rem;background:linear-gradient(160deg,#0a0a0b,#081a18 50%,#0a1210);position:relative;overflow:hidden">
+  <div style="position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(120px);opacity:.12;background:var(--tl);top:-100px;right:-100px"></div>
+  <div class="sp" style="position:relative">
+    <div>
+      <div style="display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--or);border:1px solid var(--ord);padding:.35rem .9rem;border-radius:20px;margin-bottom:1.5rem">Practice Area</div>
+      <h1 style="font-family:var(--sf);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:600;line-height:1.15;margin-bottom:1.2rem">Kinetic Safety & <em style="font-style:italic;color:var(--tl)">Compliance</em></h1>
+      <p style="font-size:1.05rem;font-weight:300;line-height:1.7;color:var(--t2);max-width:480px">We audit your fleet's safety infrastructure, connect telematics and camera data into automated workflows, and generate insurance-ready compliance reports using AI.</p>
+    </div>
+    <!-- Camera network SVG -->
+    <div class="rv">
+      <svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:10px;border:1px solid var(--bdr)">
+        <rect width="440" height="340" fill="#0e0e10" rx="10"/>
+        <!-- Fleet trucks with cameras -->
+        <g transform="translate(40,40)">
+          <rect width="80" height="50" rx="6" fill="#1a1a1e" stroke="var(--tl)" stroke-width="1"/><rect x="8" y="8" width="24" height="16" rx="3" fill="none" stroke="var(--tl)" stroke-width="1"/><circle cx="20" cy="16" r="4" fill="none" stroke="var(--tl)" stroke-width="0.8"/><text x="40" y="20" fill="var(--tl)" font-size="7" font-family="DM Sans" font-weight="600">CAM 01</text><text x="40" y="32" fill="var(--t3)" font-size="6" font-family="DM Sans">DVR ● ONLINE</text><circle cx="68" cy="38" r="3" fill="#27c93f"/>
+        </g>
+        <g transform="translate(160,40)">
+          <rect width="80" height="50" rx="6" fill="#1a1a1e" stroke="var(--tl)" stroke-width="1"/><rect x="8" y="8" width="24" height="16" rx="3" fill="none" stroke="var(--tl)" stroke-width="1"/><circle cx="20" cy="16" r="4" fill="none" stroke="var(--tl)" stroke-width="0.8"/><text x="40" y="20" fill="var(--tl)" font-size="7" font-family="DM Sans" font-weight="600">CAM 02</text><text x="40" y="32" fill="var(--t3)" font-size="6" font-family="DM Sans">DVR ● ONLINE</text><circle cx="68" cy="38" r="3" fill="#27c93f"/>
+        </g>
+        <g transform="translate(280,40)">
+          <rect width="80" height="50" rx="6" fill="#1a1a1e" stroke="var(--or)" stroke-width="1"/><rect x="8" y="8" width="24" height="16" rx="3" fill="none" stroke="var(--or)" stroke-width="1"/><circle cx="20" cy="16" r="4" fill="none" stroke="var(--or)" stroke-width="0.8"/><text x="40" y="20" fill="var(--or)" font-size="7" font-family="DM Sans" font-weight="600">CAM 03</text><text x="40" y="32" fill="var(--t3)" font-size="6" font-family="DM Sans">DVR ● OFFLINE</text><circle cx="68" cy="38" r="3" fill="var(--or)"/>
+        </g>
+        <g transform="translate(100,110)">
+          <rect width="80" height="50" rx="6" fill="#1a1a1e" stroke="var(--tl)" stroke-width="1"/><rect x="8" y="8" width="24" height="16" rx="3" fill="none" stroke="var(--tl)" stroke-width="1"/><circle cx="20" cy="16" r="4" fill="none" stroke="var(--tl)" stroke-width="0.8"/><text x="40" y="20" fill="var(--tl)" font-size="7" font-family="DM Sans" font-weight="600">CAM 04</text><text x="40" y="32" fill="var(--t3)" font-size="6" font-family="DM Sans">DVR ● ONLINE</text><circle cx="68" cy="38" r="3" fill="#27c93f"/>
+        </g>
+        <g transform="translate(220,110)">
+          <rect width="80" height="50" rx="6" fill="#1a1a1e" stroke="var(--tl)" stroke-width="1"/><rect x="8" y="8" width="24" height="16" rx="3" fill="none" stroke="var(--tl)" stroke-width="1"/><circle cx="20" cy="16" r="4" fill="none" stroke="var(--tl)" stroke-width="0.8"/><text x="40" y="20" fill="var(--tl)" font-size="7" font-family="DM Sans" font-weight="600">CAM 05</text><text x="40" y="32" fill="var(--t3)" font-size="6" font-family="DM Sans">DVR ● ONLINE</text><circle cx="68" cy="38" r="3" fill="#27c93f"/>
+        </g>
+        <!-- Flow arrows down to AI -->
+        <line x1="80" y1="90" x2="220" y2="190" stroke="var(--bdr)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="200" y1="90" x2="220" y2="190" stroke="var(--bdr)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="320" y1="90" x2="220" y2="190" stroke="var(--bdr)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="140" y1="160" x2="220" y2="190" stroke="var(--bdr)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="260" y1="160" x2="220" y2="190" stroke="var(--bdr)" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- AI Processor -->
+        <rect x="170" y="185" width="100" height="45" rx="8" fill="var(--ord)" stroke="var(--or)" stroke-width="1.5"/>
+        <text x="220" y="206" text-anchor="middle" fill="var(--or)" font-size="10" font-family="DM Sans" font-weight="700">AI ENGINE</text>
+        <text x="220" y="220" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">Compliance Analysis</text>
+        <!-- Arrow down -->
+        <line x1="220" y1="230" x2="220" y2="260" stroke="var(--or)" stroke-width="1.5" marker-end="url(#ar)"/>
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--or)"/></marker></defs>
+        <!-- Output Report -->
+        <rect x="155" y="262" width="130" height="55" rx="6" fill="#1a1a1e" stroke="var(--tl)" stroke-width="1.5"/>
+        <text x="220" y="282" text-anchor="middle" fill="var(--tl)" font-size="10" font-family="DM Sans" font-weight="700">COMPLIANCE REPORT</text>
+        <text x="220" y="296" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">Insurance-Ready PDF</text>
+        <text x="220" y="308" text-anchor="middle" fill="var(--tl)" font-size="7" font-family="DM Sans" font-weight="500">&#10003; Auto-Generated Monthly</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section>
+  <div class="sp">
+    <div class="rv">
+      <p class="tg">The Problem</p>
+      <h2 class="tt">Your cameras are recording. Nobody's watching.</h2>
+      <p style="font-size:.88rem;color:var(--t2);line-height:1.8;margin-bottom:1rem">Most haulers have cameras, telematics, and driver logs. But the data sits in silos. Nobody is turning it into something your insurance carrier can see.</p>
+      <p style="font-size:.88rem;color:var(--t2);line-height:1.8">That means you're paying premiums as if you have no safety program at all.</p>
+    </div>
+    <div class="rv">
+      <div class="cd" style="border-color:var(--or)">
+        <h3 style="color:var(--or)">What haulers leave on the table</h3>
+        <ul><li>Camera systems installed but no compliance reporting</li><li>Telematics data collected but never analyzed</li><li>Driver logs completed but not aggregated</li><li>Insurance renewals with no safety evidence</li><li>Manual safety reviews once a year (or never)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section style="background:var(--bg3)">
+  <div class="rv"><p class="tg">What We Build</p><h2 class="tt">Automated safety and compliance workflows</h2><p class="ds">We connect your existing hardware into a single pipeline. Projects run 2-6 weeks.</p></div>
+  <div class="cg c3">
+    <div class="cd rv"><div class="ic ti"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div><h3>Camera & DVR Audit</h3><p>Assess camera placement, coverage gaps, DVR health, storage retention, and video quality across your fleet.</p></div>
+    <div class="cd rv"><div class="ic ti"><svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><h3>Telematics Dashboard</h3><p>Custom dashboard ingesting GPS, hard braking, speeding, idle time. Weekly safety scorecards auto-generated.</p></div>
+    <div class="cd rv"><div class="ic ti"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><h3>AI Compliance Reports</h3><p>Local LLM reads your safety data and generates plain-English reports mapped to what insurers care about.</p></div>
+    <div class="cd rv"><div class="ic ti"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3>Safety Program Design</h3><p>Documented safety program with pre/post-trip checklists, incident protocols, and training tracking.</p></div>
+    <div class="cd rv"><div class="ic ti"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Premium Reduction Strategy</h3><p>Package your compliance report for your broker to take directly to underwriters.</p></div>
+    <div class="cd rv"><div class="ic ti"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><h3>Sensor & Hardware Integration</h3><p>Tim evaluates existing hardware, recommends upgrades, ensures everything feeds the compliance pipeline.</p></div>
+  </div>
+</section>
+
+<!-- FEATURED AUDIT -->
+<section>
+  <div class="sp">
+    <div class="rv">
+      <p class="tg">Featured Engagement</p>
+      <h2 class="tt">The Kinetic Safety Audit</h2>
+      <p style="font-size:.88rem;color:var(--t2);line-height:1.8;margin-bottom:1.5rem">3-week engagement. Tim audits your hardware. Josh builds the AI compliance engine. You walk away with a report your broker can use immediately.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.5rem">
+        <div class="kb"><div class="kv2">3 Wks</div><div class="kl2">Engagement</div></div>
+        <div class="kb"><div class="kv2">5-10%</div><div class="kl2">Premium Reduction</div></div>
+      </div>
+      <a href="index.html#contact" class="btn bo">Request an Audit</a>
+    </div>
+    <!-- Compliance Report Preview SVG -->
+    <div class="rv">
+      <svg viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:10px;border:1px solid var(--bdr)">
+        <rect width="380" height="420" fill="#0e0e10" rx="10"/>
+        <!-- Report document -->
+        <rect x="40" y="20" width="300" height="380" rx="6" fill="#131315" stroke="var(--tl)" stroke-width="1.5"/>
+        <!-- Header -->
+        <rect x="40" y="20" width="300" height="50" rx="6" fill="rgba(0,245,212,0.06)"/>
+        <text x="190" y="42" text-anchor="middle" fill="var(--tl)" font-size="11" font-family="DM Sans" font-weight="700">FLEET COMPLIANCE REPORT</text>
+        <text x="190" y="58" text-anchor="middle" fill="var(--t3)" font-size="8" font-family="DM Sans">Generated by Omni Kinetic AI Engine &bull; April 2026</text>
+        <!-- Score -->
+        <circle cx="190" cy="115" r="30" fill="none" stroke="var(--tl)" stroke-width="3"/>
+        <text x="190" y="112" text-anchor="middle" fill="var(--tl)" font-size="20" font-family="Playfair Display" font-weight="700">87</text>
+        <text x="190" y="126" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">/100</text>
+        <text x="190" y="158" text-anchor="middle" fill="var(--t2)" font-size="8" font-family="DM Sans" font-weight="500">OVERALL SAFETY SCORE</text>
+        <!-- Category bars -->
+        <text x="65" y="185" fill="var(--t2)" font-size="8" font-family="DM Sans">Camera Coverage</text><rect x="180" y="177" width="140" height="8" rx="4" fill="#2a2a2e"/><rect x="180" y="177" width="130" height="8" rx="4" fill="var(--tl)"/><text x="325" y="185" fill="var(--t3)" font-size="7" font-family="DM Sans">93%</text>
+        <text x="65" y="205" fill="var(--t2)" font-size="8" font-family="DM Sans">DVR Uptime</text><rect x="180" y="197" width="140" height="8" rx="4" fill="#2a2a2e"/><rect x="180" y="197" width="122" height="8" rx="4" fill="var(--tl)"/><text x="325" y="205" fill="var(--t3)" font-size="7" font-family="DM Sans">87%</text>
+        <text x="65" y="225" fill="var(--t2)" font-size="8" font-family="DM Sans">Driver Behavior</text><rect x="180" y="217" width="140" height="8" rx="4" fill="#2a2a2e"/><rect x="180" y="217" width="112" height="8" rx="4" fill="var(--or)"/><text x="325" y="225" fill="var(--t3)" font-size="7" font-family="DM Sans">80%</text>
+        <text x="65" y="245" fill="var(--t2)" font-size="8" font-family="DM Sans">Inspection Logs</text><rect x="180" y="237" width="140" height="8" rx="4" fill="#2a2a2e"/><rect x="180" y="237" width="126" height="8" rx="4" fill="var(--tl)"/><text x="325" y="245" fill="var(--t3)" font-size="7" font-family="DM Sans">90%</text>
+        <text x="65" y="265" fill="var(--t2)" font-size="8" font-family="DM Sans">Training Records</text><rect x="180" y="257" width="140" height="8" rx="4" fill="#2a2a2e"/><rect x="180" y="257" width="105" height="8" rx="4" fill="var(--or)"/><text x="325" y="265" fill="var(--t3)" font-size="7" font-family="DM Sans">75%</text>
+        <text x="65" y="285" fill="var(--t2)" font-size="8" font-family="DM Sans">HOS / ELD</text><rect x="180" y="277" width="140" height="8" rx="4" fill="#2a2a2e"/><rect x="180" y="277" width="133" height="8" rx="4" fill="var(--tl)"/><text x="325" y="285" fill="var(--t3)" font-size="7" font-family="DM Sans">95%</text>
+        <!-- Bottom summary -->
+        <line x1="60" y1="300" x2="320" y2="300" stroke="var(--bdr)" stroke-width="1"/>
+        <text x="65" y="320" fill="var(--t2)" font-size="8" font-family="DM Sans" font-weight="500">RECOMMENDATION</text>
+        <text x="65" y="338" fill="var(--t3)" font-size="7.5" font-family="DM Sans">Fleet demonstrates strong safety infrastructure with</text>
+        <text x="65" y="350" fill="var(--t3)" font-size="7.5" font-family="DM Sans">93% camera coverage and 95% ELD compliance.</text>
+        <text x="65" y="362" fill="var(--t3)" font-size="7.5" font-family="DM Sans">Address driver behavior scoring and training records</text>
+        <text x="65" y="374" fill="var(--t3)" font-size="7.5" font-family="DM Sans">to move from 87 to 92+ and unlock premium tier.</text>
+        <!-- Stamp -->
+        <rect x="245" y="358" width="70" height="28" rx="4" fill="var(--tld)" stroke="var(--tl)" stroke-width="1"/>
+        <text x="280" y="376" text-anchor="middle" fill="var(--tl)" font-size="8" font-family="DM Sans" font-weight="700">VERIFIED</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET -->
+<section style="background:var(--bg2);text-align:center">
+  <div class="rv" style="max-width:550px;margin:0 auto">
+    <p class="tg">Who This Is For</p>
+    <h2 class="tt">Haulers with 5-50 trucks</h2>
+    <p style="font-size:.88rem;color:var(--t2);line-height:1.8">Big enough to have real insurance pain ($50-200K/yr premiums). Small enough that you don't have a safety department.</p>
+    <a href="index.html#contact" class="btn bo" style="margin-top:1.5rem">Talk About Your Fleet</a>
+  </div>
+</section>
+
+<div class="cb"><h2>Stop paying premiums like you have no safety program.</h2><p>Let us prove to your carrier what your fleet is actually doing.</p><a href="index.html#contact" class="btn bw">Request an Audit</a></div>
+<footer><div><strong>OKC</strong> &bull; Omni Kinetic Consulting</div><div>&copy; 2026 All rights reserved.</div></footer>
+<script>const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.rv').forEach(el=>o.observe(el));</script>
+</body>
+</html>

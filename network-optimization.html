@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Optimization | Omni Kinetic Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--bg2:#131315;--bg3:#1a1a1e;--bdr:#2a2a2e;--t1:#e8e8e8;--t2:#9a9a9a;--t3:#666;--or:#ff6b00;--ord:rgba(255,107,0,.12);--org:rgba(255,107,0,.06);--tl:#00f5d4;--tld:rgba(0,245,212,.1);--w:#fff;--sf:'Playfair Display',Georgia,serif;--sn:'DM Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--sn);color:var(--t1);background:var(--bg);-webkit-font-smoothing:antialiased}a{color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,10,11,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);padding:0 4rem;display:flex;justify-content:space-between;align-items:center;height:68px}
+.nl{font-size:1rem;font-weight:600;color:var(--t1);text-decoration:none;display:flex;align-items:center;gap:.6rem}.mk{background:var(--or);color:var(--bg);font-size:.6rem;font-weight:700;letter-spacing:.18em;padding:.3rem .55rem;border-radius:3px}
+.nv{display:flex;gap:0;list-style:none}.nv>li{position:relative}.nv>li>a{font-size:.8rem;font-weight:400;color:var(--t2);text-decoration:none;padding:1.3rem 1rem;display:block;transition:color .2s}.nv>li>a:hover,.nv>li>a.active{color:var(--or)}
+.dd{display:none;position:absolute;top:100%;left:0;background:var(--bg3);border:1px solid var(--bdr);border-radius:6px;min-width:280px;box-shadow:0 12px 40px rgba(0,0,0,.4);padding:.4rem 0;z-index:200}.nv li:hover .dd{display:block}.dd a{display:block;padding:.65rem 1.2rem;font-size:.8rem;color:var(--t2);text-decoration:none;transition:background .15s}.dd a:hover{background:var(--ord);color:var(--or)}.dd a small{display:block;font-size:.7rem;color:var(--t3);margin-top:.1rem}
+.nc{font-size:.75rem;font-weight:600;color:var(--bg);background:var(--or);padding:.5rem 1.3rem;border-radius:4px;text-decoration:none}.nc:hover{background:#e55f00}
+.mobt{display:none;cursor:pointer;background:none;border:none}.mobt span{display:block;width:22px;height:2px;background:var(--t1);margin:5px 0}
+section{padding:5rem 4rem}.tg{font-size:.65rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:.8rem}.tt{font-family:var(--sf);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:600;line-height:1.25;margin-bottom:1rem}.ds{font-size:.9rem;font-weight:400;color:var(--t2);line-height:1.7;max-width:540px}
+.sp{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.cg{display:grid;gap:1.2rem;margin-top:2.5rem}.c3{grid-template-columns:repeat(3,1fr)}.c2{grid-template-columns:repeat(2,1fr)}
+.cd{background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:2rem;transition:all .3s}.cd:hover{border-color:var(--or);box-shadow:0 0 30px var(--org);transform:translateY(-2px)}
+.ic{width:42px;height:42px;background:var(--ord);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}.ic svg{width:20px;height:20px;stroke:var(--or);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.cd h3{font-size:1rem;font-weight:600;color:var(--t1);margin-bottom:.5rem}.cd p{font-size:.8rem;color:var(--t2);line-height:1.7}
+.kb{background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;padding:1.2rem;text-align:center}.kv2{font-family:var(--sf);font-size:1.7rem;font-weight:600;color:var(--or)}.kl2{font-size:.62rem;font-weight:400;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
+.qb{margin-top:1.5rem;background:var(--bg2);border-left:3px solid var(--or);padding:1.2rem 1.5rem;border-radius:0 6px 6px 0}.qb p{font-size:.82rem;font-style:italic;color:var(--t2);line-height:1.7;margin-bottom:.4rem}.qb cite{font-size:.72rem;color:var(--or);font-style:normal;font-weight:600}
+.pc{background:var(--bg2);border:2px solid var(--or);border-radius:10px;padding:2.5rem;text-align:center}.pc ul{list-style:none;text-align:left;margin-bottom:1.5rem}.pc ul li{font-size:.8rem;color:var(--t2);padding:.45rem 0;border-bottom:1px solid var(--bdr)}.pc ul li::before{content:'✓ ';color:var(--or);font-weight:700}
+.btn{display:inline-block;font-family:var(--sn);font-size:.8rem;font-weight:600;padding:.75rem 1.6rem;border-radius:4px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}.bo{background:var(--or);color:var(--bg)}.bo:hover{background:#e55f00}.bw{background:var(--w);color:var(--bg)}.bw:hover{background:#f0f0f0}
+.cb{background:var(--or);color:var(--bg);text-align:center;padding:4rem}.cb h2{font-family:var(--sf);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;margin-bottom:.8rem}.cb p{font-size:.92rem;color:rgba(10,10,11,.7);max-width:440px;margin:0 auto 1.8rem;line-height:1.6}
+footer{background:var(--bg2);border-top:1px solid var(--bdr);color:var(--t3);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;font-size:.72rem}footer strong{color:var(--or)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .4s ease,transform .4s ease}.rv.v{opacity:1;transform:translateY(0)}
+.mm{display:none;position:fixed;inset:0;background:var(--bg);z-index:200;flex-direction:column;justify-content:center;align-items:center;gap:1.5rem}.mm.open{display:flex}.mm a{font-size:1.2rem;font-weight:500;color:var(--t1);text-decoration:none}.mm a:hover{color:var(--or)}.mc{position:absolute;top:1rem;right:1.5rem;font-size:1.8rem;color:var(--t1);cursor:pointer;background:none;border:none}
+@media(max-width:1024px){section{padding:3.5rem 2rem}nav{padding:0 1.5rem}.cg.c3,.cg.c2,.sp{grid-template-columns:1fr}footer{padding:1.5rem 2rem;flex-direction:column;gap:.5rem;text-align:center}}
+@media(max-width:768px){.nv,.nc{display:none}.mobt{display:block}.fr{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="nl"><span class="mk">OKC</span> Omni Kinetic</a><ul class="nv"><li><a href="index.html">Home</a></li><li><a href="#" class="active">Services &#9662;</a><div class="dd"><a href="network-optimization.html"><strong>Network Optimization</strong></a><a href="kinetic-safety.html"><strong>Kinetic Safety & Compliance</strong></a><a href="gig-platform.html"><strong>Gig Services Platform</strong></a></div></li><li><a href="index.html#results">Results</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#contact">Contact</a></li></ul><a href="index.html#contact" class="nc">Get in Touch</a><button class="mobt" onclick="document.querySelector('.mm').classList.add('open')"><span></span><span></span><span></span></button></nav>
+<div class="mm"><button class="mc" onclick="this.parentElement.classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="network-optimization.html">Network Optimization</a><a href="kinetic-safety.html">Kinetic Safety</a><a href="gig-platform.html">Gig Platform</a><a href="index.html#contact">Contact</a></div>
+
+<!-- HERO with before/after route SVG -->
+<section style="padding:9rem 4rem 5rem;background:linear-gradient(160deg,#0a0a0b,#1a1008 50%,#120a04);position:relative;overflow:hidden">
+  <div style="position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(120px);opacity:.15;background:var(--or);top:-100px;right:-100px"></div>
+  <div class="sp" style="position:relative">
+    <div>
+      <div style="display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--or);border:1px solid var(--ord);padding:.35rem .9rem;border-radius:20px;margin-bottom:1.5rem">Practice Area</div>
+      <h1 style="font-family:var(--sf);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:600;line-height:1.15;margin-bottom:1.2rem">Network <em style="font-style:italic;color:var(--or)">Optimization</em></h1>
+      <p style="font-size:1.05rem;font-weight:300;line-height:1.7;color:var(--t2);max-width:480px">Throughput and reliability beat speed every time. We optimize for route density, first-attempt success, cost per stop, and capacity utilization.</p>
+    </div>
+    <!-- Before / After Route SVG -->
+    <div class="rv">
+      <svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:10px;border:1px solid var(--bdr)">
+        <rect width="460" height="340" fill="#0e0e10" rx="10"/>
+        <!-- Before side -->
+        <text x="115" y="25" text-anchor="middle" fill="var(--t3)" font-size="9" font-family="DM Sans" font-weight="600" letter-spacing="1">BEFORE</text>
+        <rect x="5" y="32" width="220" height="300" rx="6" fill="#131315" stroke="#2a2a2e" stroke-width="1"/>
+        <!-- Messy routes -->
+        <path d="M30,280 L60,80 L180,250 L80,60 L200,150 L40,180 L190,90 L110,290" stroke="#ff3333" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <path d="M110,290 L170,50 L50,200 L200,280 L90,100" stroke="#ff3333" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <!-- Scattered stops -->
+        <circle cx="60" cy="80" r="5" fill="#ff3333" opacity="0.7"/><circle cx="180" cy="250" r="5" fill="#ff3333" opacity="0.7"/><circle cx="80" cy="60" r="5" fill="#ff3333" opacity="0.7"/><circle cx="200" cy="150" r="5" fill="#ff3333" opacity="0.7"/><circle cx="40" cy="180" r="5" fill="#ff3333" opacity="0.7"/><circle cx="190" cy="90" r="5" fill="#ff3333" opacity="0.7"/><circle cx="110" cy="290" r="5" fill="#ff3333" opacity="0.7"/><circle cx="170" cy="50" r="5" fill="#ff3333" opacity="0.7"/><circle cx="50" cy="200" r="5" fill="#ff3333" opacity="0.7"/><circle cx="200" cy="280" r="5" fill="#ff3333" opacity="0.7"/>
+        <text x="115" y="325" text-anchor="middle" fill="#ff3333" font-size="8" font-family="DM Sans" font-weight="500">142 miles &bull; 10 stops &bull; 6.2 hrs</text>
+
+        <!-- After side -->
+        <text x="345" y="25" text-anchor="middle" fill="var(--tl)" font-size="9" font-family="DM Sans" font-weight="600" letter-spacing="1">AFTER</text>
+        <rect x="235" y="32" width="220" height="300" rx="6" fill="#131315" stroke="var(--tl)" stroke-width="1" opacity="0.5"/>
+        <!-- Clean optimized route -->
+        <path d="M270,280 L280,240 L300,200 L310,170 L330,150 L350,130 L370,110 L380,85 L400,65 L420,55" stroke="var(--tl)" stroke-width="2" fill="none" stroke-linecap="round">
+          <animate attributeName="stroke-dasharray" from="0,1000" to="500,0" dur="2s" fill="freeze"/>
+        </path>
+        <!-- Clustered stops -->
+        <circle cx="270" cy="280" r="5" fill="var(--tl)"/><circle cx="280" cy="240" r="5" fill="var(--tl)"/><circle cx="300" cy="200" r="5" fill="var(--tl)"/><circle cx="310" cy="170" r="5" fill="var(--tl)"/><circle cx="330" cy="150" r="5" fill="var(--tl)"/><circle cx="350" cy="130" r="5" fill="var(--tl)"/><circle cx="370" cy="110" r="5" fill="var(--tl)"/><circle cx="380" cy="85" r="5" fill="var(--tl)"/><circle cx="400" cy="65" r="5" fill="var(--tl)"/><circle cx="420" cy="55" r="5" fill="var(--tl)"/>
+        <text x="345" y="325" text-anchor="middle" fill="var(--tl)" font-size="8" font-family="DM Sans" font-weight="500">87 miles &bull; 10 stops &bull; 4.1 hrs</text>
+
+        <!-- Arrow -->
+        <text x="230" y="195" text-anchor="middle" fill="var(--or)" font-size="16" font-weight="700">&#8594;</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section style="background:var(--bg3)">
+  <div class="sp">
+    <div class="rv">
+      <p class="tg">Our Philosophy</p>
+      <h2 class="tt">Speed is overrated. Throughput wins.</h2>
+      <p style="font-size:.88rem;color:var(--t2);line-height:1.8"><strong style="color:var(--t1)">It's about how many packages move reliably, every day, at a cost that protects your margin.</strong></p>
+      <p style="font-size:.88rem;color:var(--t2);line-height:1.8;margin-top:1rem">Every re-delivery costs $15-30. A 98% first-attempt rate beats a "same-day" promise that fails 15% of the time.</p>
+      <div class="qb"><p>"Route density matters more than route speed. 40 stops instead of 30 is a 33% capacity gain without adding a truck."</p><cite>Josh Trainum, Omni Kinetic</cite></div>
+    </div>
+    <div class="rv">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div class="kb"><div class="kv2">53%</div><div class="kl2">of shipping cost is last-mile</div></div>
+        <div class="kb"><div class="kv2">98%+</div><div class="kl2">first-attempt rate target</div></div>
+        <div class="kb"><div class="kv2">$15-30</div><div class="kl2">cost per failed attempt</div></div>
+        <div class="kb"><div class="kv2">3:1</div><div class="kl2">ROI on every engagement</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES with Mode Decisioning SVG -->
+<section>
+  <div class="rv"><p class="tg">Capabilities</p><h2 class="tt">What we optimize</h2><p class="ds">Typical projects run 2-6 weeks. Every engagement delivers measurable ROI.</p></div>
+  <div class="cg c3">
+    <div class="cd rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg></div><h3>Route Optimization & Network Design</h3><p>Map current routes, find deadhead miles and missed density, redesign for maximum stops per shift.</p></div>
+    <div class="cd rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></div><h3>Mode Decisioning</h3><p>Ground, courier, or crowdsource? We model the cost-service tradeoff for every shipment type.</p></div>
+    <div class="cd rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div><h3>Dynamic Pricing & Margin</h3><p>Analyze transportation spend line by line to identify pricing gaps and margin leakage.</p></div>
+    <div class="cd rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><h3>Dispatch Logic & Capacity</h3><p>Redesign dispatch rules to maximize utilization and reduce empty miles.</p></div>
+    <div class="cd rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg></div><h3>KPI Dashboards</h3><p>Custom dashboards tracking cost per stop, first-attempt rate, route density, and on-time performance.</p></div>
+    <div class="cd rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Carrier Procurement & Strategy</h3><p>RFPs, rate negotiation, carrier scorecards for leverage and visibility.</p></div>
+  </div>
+</section>
+
+<!-- MODE DECISIONING SVG -->
+<section style="background:var(--bg2)">
+  <div class="sp">
+    <div class="rv">
+      <p class="tg">Mode Decisioning</p>
+      <h2 class="tt">Right mode. Right shipment. Every time.</h2>
+      <p style="font-size:.88rem;color:var(--t2);line-height:1.8">Not every delivery needs the same carrier type. We model cost vs. service for every shipment and recommend the optimal mix across your network.</p>
+    </div>
+    <div class="rv">
+      <svg viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:10px;border:1px solid var(--bdr)">
+        <rect width="440" height="280" fill="#0e0e10" rx="10"/>
+        <!-- Center node -->
+        <circle cx="220" cy="140" r="35" fill="var(--ord)" stroke="var(--or)" stroke-width="2"/>
+        <text x="220" y="136" text-anchor="middle" fill="var(--or)" font-size="9" font-family="DM Sans" font-weight="700">ORDER</text>
+        <text x="220" y="149" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">INTAKE</text>
+        <!-- Ground -->
+        <rect x="30" y="40" width="100" height="55" rx="6" fill="#1a1a1e" stroke="var(--tl)" stroke-width="1.5"/>
+        <text x="80" y="62" text-anchor="middle" fill="var(--tl)" font-size="10" font-family="DM Sans" font-weight="600">Ground</text>
+        <text x="80" y="78" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">$2.80/stop &bull; 24-48hr</text>
+        <line x1="130" y1="67" x2="185" y2="130" stroke="var(--tl)" stroke-width="1" stroke-dasharray="4,3"/>
+        <!-- Courier -->
+        <rect x="30" y="180" width="100" height="55" rx="6" fill="#1a1a1e" stroke="var(--or)" stroke-width="1.5"/>
+        <text x="80" y="202" text-anchor="middle" fill="var(--or)" font-size="10" font-family="DM Sans" font-weight="600">Courier</text>
+        <text x="80" y="218" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">$8.50/stop &bull; Same-day</text>
+        <line x1="130" y1="207" x2="185" y2="150" stroke="var(--or)" stroke-width="1" stroke-dasharray="4,3"/>
+        <!-- Crowdsource -->
+        <rect x="310" y="40" width="100" height="55" rx="6" fill="#1a1a1e" stroke="#a855f7" stroke-width="1.5"/>
+        <text x="360" y="62" text-anchor="middle" fill="#a855f7" font-size="10" font-family="DM Sans" font-weight="600">Crowdsource</text>
+        <text x="360" y="78" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">$5.20/stop &bull; 2-6hr</text>
+        <line x1="310" y1="67" x2="255" y2="130" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"/>
+        <!-- Dedicated -->
+        <rect x="310" y="180" width="100" height="55" rx="6" fill="#1a1a1e" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="360" y="202" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="DM Sans" font-weight="600">Dedicated</text>
+        <text x="360" y="218" text-anchor="middle" fill="var(--t3)" font-size="7" font-family="DM Sans">$1.90/stop &bull; Scheduled</text>
+        <line x1="310" y1="207" x2="255" y2="150" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,3"/>
+        <!-- Bottom label -->
+        <text x="220" y="268" text-anchor="middle" fill="var(--t3)" font-size="8" font-family="DM Sans" font-weight="500">AI selects optimal mode per shipment based on cost, SLA, and density</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section>
+  <div class="sp">
+    <div class="rv">
+      <p class="tg">Engagement Scope</p>
+      <h2 class="tt">Typical projects run 2-6 weeks</h2>
+      <ul style="list-style:none;margin-top:1.5rem">
+        <li style="padding:.5rem 0;border-bottom:1px solid var(--bdr);font-size:.82rem;display:flex;justify-content:space-between"><span>Route Optimization Audit</span><strong style="color:var(--or)">$3K-$8K</strong></li>
+        <li style="padding:.5rem 0;border-bottom:1px solid var(--bdr);font-size:.82rem;display:flex;justify-content:space-between"><span>Mode Decisioning Analysis</span><strong style="color:var(--or)">$4K-$10K</strong></li>
+        <li style="padding:.5rem 0;border-bottom:1px solid var(--bdr);font-size:.82rem;display:flex;justify-content:space-between"><span>Custom KPI Dashboard Build</span><strong style="color:var(--or)">$2.5K-$6K</strong></li>
+        <li style="padding:.5rem 0;border-bottom:1px solid var(--bdr);font-size:.82rem;display:flex;justify-content:space-between"><span>Carrier Strategy & RFP</span><strong style="color:var(--or)">$5K-$12K</strong></li>
+        <li style="padding:.5rem 0;font-size:.82rem;display:flex;justify-content:space-between"><span>Monthly Retainer</span><strong style="color:var(--or)">$500-$2K/mo</strong></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <div class="pc">
+        <div style="font-size:.65rem;font-weight:600;color:var(--or);text-transform:uppercase;letter-spacing:.15em;margin-bottom:.3rem">Most Popular</div>
+        <div style="font-size:1.1rem;font-weight:600;margin-bottom:.6rem">Route Optimization Audit</div>
+        <div style="font-family:var(--sf);font-size:2.5rem;font-weight:600;color:var(--or)">$5,000</div>
+        <div style="font-size:.75rem;color:var(--t3);margin-bottom:1.2rem">Typical 3-week engagement</div>
+        <ul><li>Full network mapping and analysis</li><li>Route density and efficiency scoring</li><li>Mode mix recommendations</li><li>Projected savings report</li><li>Implementation roadmap</li><li>Custom dashboard (optional add-on)</li></ul>
+        <a href="index.html#contact" class="btn bo" style="width:100%;text-align:center">Request a Scope Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cb"><h2>Most operators have 10-20% in addressable savings they don't know about.</h2><p>Let's find what's hiding in your routes.</p><a href="index.html#contact" class="btn bw">Let's Talk</a></div>
+<footer><div><strong>OKC</strong> &bull; Omni Kinetic Consulting</div><div>&copy; 2026 All rights reserved.</div></footer>
+<script>const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.rv').forEach(el=>o.observe(el));</script>
+</body>
+</html>
